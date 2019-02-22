@@ -1,0 +1,552 @@
+A = [1:4, 5:8: 9:12, 13:16]
+
+A =
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16
+
+A = [1:4, 5:8, 9:12, 13:16]
+
+A =
+
+     1     2     3     4     5     6     7     8     9    10    11    12    13    14    15    16
+
+A = [1:4; 5:8; 9:12; 13:16]
+
+A =
+
+     1     2     3     4
+     5     6     7     8
+     9    10    11    12
+    13    14    15    16
+
+B = A
+
+B =
+
+     1     2     3     4
+     5     6     7     8
+     9    10    11    12
+    13    14    15    16
+
+B = 0
+
+B =
+
+     0
+
+B = A
+
+B =
+
+     1     2     3     4
+     5     6     7     8
+     9    10    11    12
+    13    14    15    16
+
+B(:,:) = 0
+
+B =
+
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+     0     0     0     0
+
+B = A
+
+B =
+
+     1     2     3     4
+     5     6     7     8
+     9    10    11    12
+    13    14    15    16
+
+B(1:2, 1:2) = 0
+
+B =
+
+     0     0     3     4
+     0     0     7     8
+     9    10    11    12
+    13    14    15    16
+
+B = A
+
+B =
+
+     1     2     3     4
+     5     6     7     8
+     9    10    11    12
+    13    14    15    16
+
+B(1:2, 3:4) = 0
+
+B =
+
+     1     2     0     0
+     5     6     0     0
+     9    10    11    12
+    13    14    15    16
+
+B(3:4, 1:2) = 0
+
+B =
+
+     1     2     0     0
+     5     6     0     0
+     0     0    11    12
+     0     0    15    16
+
+B = A(1:2,1:2)
+
+B =
+
+     1     2
+     5     6
+
+C = A(3:4,3:4)
+
+C =
+
+    11    12
+    15    16
+
+B = [B, C]
+
+B =
+
+     1     2    11    12
+     5     6    15    16
+
+u = 1 2
+ u = 1 2
+       
+{Error: Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other syntax error. To
+construct matrices, use brackets instead of parentheses.
+} 
+u = [1 2]
+
+u =
+
+     1     2
+
+v = u
+
+v =
+
+     1     2
+
+u1 = [2 3]
+
+u1 =
+
+     2     3
+
+v1 = [3 4]
+
+v1 =
+
+     3     4
+
+B = [A(u,v), A(u1,v1]
+ B = [A(u,v), A(u1,v1]
+                     
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched
+delimiters.
+} 
+B = [A(u,v), A(u1,v1]]
+ B = [A(u,v), A(u1,v1]]
+                     
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched
+delimiters.
+} 
+B = [A(u,v), A(u1,v1]
+ B = [A(u,v), A(u1,v1]
+                     
+{Error: Invalid expression. When calling a function or indexing a variable, use parentheses. Otherwise, check for mismatched
+delimiters.
+} 
+B = [A(u,v), A(u1,v1)]
+
+B =
+
+     1     2     7     8
+     5     6    11    12
+
+vec2mat(1:9, 3)
+
+ans =
+
+     1     2     3
+     4     5     6
+     7     8     9
+
+length(ans)
+
+ans =
+
+     3
+
+size(ans)
+
+ans =
+
+     1     1
+
+size(vec2mat(1:9, 3))
+
+ans =
+
+     3     3
+
+vec2mat(1:9, 4)
+
+ans =
+
+     1     2     3     4
+     5     6     7     8
+     9     0     0     0
+
+vec2mat(1:9, 2)
+
+ans =
+
+     1     2
+     3     4
+     5     6
+     7     8
+     9     0
+
+scatter3(rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100).*100, rand(1, 100))
+fliplr(vander(v))
+
+ans =
+
+     1     1
+     1     2
+
+A = vec2mat(1:4, 2)
+
+A =
+
+     1     2
+     3     4
+
+B = vec2mat(5:8, 2)
+
+B =
+
+     5     6
+     7     8
+
+A * B
+
+ans =
+
+    19    22
+    43    50
+
+A .* B
+
+ans =
+
+     5    12
+    21    32
+
+A ./ B
+
+ans =
+
+    0.2000    0.3333
+    0.4286    0.5000
+
+A .\ B
+
+ans =
+
+    5.0000    3.0000
+    2.3333    2.0000
+
+A .^ B
+
+ans =
+
+           1          64
+        2187       65536
+
+A = [2 3 1; 3 1 -1; 2 -1 3]
+
+A =
+
+     2     3     1
+     3     1    -1
+     2    -1     3
+
+b = [11; 2 ; 9]
+
+b =
+
+    11
+     2
+     9
+
+A * b
+
+ans =
+
+    37
+    26
+    47
+
+A(1, :) * ans == b(1)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+b(1)
+
+ans =
+
+    11
+
+A(1, :) * ans
+
+ans =
+
+    22    33    11
+
+cumsum(ans)
+
+ans =
+
+    22    55    66
+
+A(1, :) .* ans
+
+ans =
+
+    44   165    66
+
+x = A * b
+
+x =
+
+    37
+    26
+    47
+
+A(1, :) .* x
+
+ans =
+
+    74   111    37
+    52    78    26
+    94   141    47
+
+A(1, :) * x
+
+ans =
+
+   199
+
+A(1, :) .* x
+
+ans =
+
+    74   111    37
+    52    78    26
+    94   141    47
+
+A(1, :) * x
+
+ans =
+
+   199
+
+A(2, :) * x
+
+ans =
+
+    90
+
+cur = A
+
+cur =
+
+     2     3     1
+     3     1    -1
+     2    -1     3
+
+cur(:,1) = b
+
+cur =
+
+    11     3     1
+     2     1    -1
+     9    -1     3
+
+x = det(cur)/det(A)
+
+x =
+
+    1.0000
+
+cur = A
+
+cur =
+
+     2     3     1
+     3     1    -1
+     2    -1     3
+
+cur(:,2) = b
+
+cur =
+
+     2    11     1
+     3     2    -1
+     2     9     3
+
+y = det(cur)/det(A)
+
+y =
+
+     2
+
+cur(:,3) = b
+
+cur =
+
+     2    11    11
+     3     2     2
+     2     9     9
+
+z = det(cur)/det(A)
+
+z =
+
+   4.0055e-16
+
+A(1,:) .* [x, y, z]
+
+ans =
+
+    2.0000    6.0000    0.0000
+
+A(2,:) .* [x, y, z]
+
+ans =
+
+    3.0000    2.0000   -0.0000
+
+x = A\b
+
+x =
+
+    1.0000
+    2.0000
+    3.0000
+
+b1 = A * x
+
+b1 =
+
+    11
+     2
+     9
+
+a = 1:3
+
+a =
+
+     1     2     3
+
+b = 3:-1:1
+
+b =
+
+     3     2     1
+
+c = sum(a.*b)
+
+c =
+
+    10
+
+c1 = a*b'
+
+c1 =
+
+    10
+
+c2 = dot(a,b)
+
+c2 =
+
+    10
+
+diary off
+v = cross(a,b)
+
+v =
+
+    -4     8    -4
+
+polarplot3([a,b,v])
+{Undefined function or variable 'polarplot3'.
+} 
+polarplot([a,b,v])
+quiver3([a,b,v])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('quiver3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m', 38)" style="font-weight:bold">quiver3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m',38,0)">line 38</a>)
+Not enough input arguments.
+} 
+quiver3(-10:0.1:10,-10:0.1:10,[a,b,v])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('quiver3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m', 38)" style="font-weight:bold">quiver3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m',38,0)">line 38</a>)
+Not enough input arguments.
+} 
+quiver3(-10:0.1:10,-10:0.1:10,a,b,v)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('quiver3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m', 44)" style="font-weight:bold">quiver3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m',44,0)">line 44</a>)
+AutoScaleFactor must be a scalar double.
+} 
+quiver3(-10:0.1:10,-10:0.1:10,-10:0.1:10,a,b,v)
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('quiver3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m', 44)" style="font-weight:bold">quiver3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\quiver3.m',44,0)">line 44</a>)
+Z and U must be the same size.
+} 
+plot3(a,b,v)
+scatter3(a,b,v)
+scatter3(a,b,v,[0,0,0])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('scatter3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\scatter3.m', 135)" style="font-weight:bold">scatter3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\scatter3.m',135,0)">line 135</a>)
+Error setting property 'SizeData' of class '<a href="matlab:doc matlab.graphics.chart.primitive.Scatter">Scatter</a>':
+Value must be a vector of positive numeric type or nan
+} 
+scatter3(a,b,v,[0 0 0])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('scatter3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\scatter3.m', 135)" style="font-weight:bold">scatter3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\scatter3.m',135,0)">line 135</a>)
+Error setting property 'SizeData' of class '<a href="matlab:doc matlab.graphics.chart.primitive.Scatter">Scatter</a>':
+Value must be a vector of positive numeric type or nan
+} 
+scatter3([a,b,v,[0 0 0]])
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('scatter3', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\scatter3.m', 53)" style="font-weight:bold">scatter3</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\scatter3.m',53,0)">line 53</a>)
+Not enough input arguments.
+} 
+scatter(x,b,a)
+gscatter(x,b,a)
+gscatter(x,b,a)
+plot(b, 'DisplayName', 'b', 'YDataSource', 'b'); figure(gcf)
+plot(cur, 'DisplayName', 'cur', 'YDataSource', 'cur'); figure(gcf)
+plot(u, 'DisplayName', 'u', 'YDataSource', 'u'); figure(gcf)
+plot(cur, 'DisplayName', 'cur', 'YDataSource', 'cur'); figure(gcf)
+fplot(@(x) x*x + 5*sin(x), [-10,10])
+[Warning: Function behaves unexpectedly on array inputs. To improve performance, properly vectorize
+your function to return an output with the same size and shape as the input arguments.] 
+[> In matlab.graphics.function.FunctionLine>getFunction
+  In matlab.graphics.function.FunctionLine/updateFunction
+  In matlab.graphics.function.FunctionLine/set.Function_I
+  In matlab.graphics.function.FunctionLine/set.Function
+  In matlab.graphics.function.FunctionLine
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fplot>singleFplot', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m', 234)" style="font-weight:bold">fplot>singleFplot</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m',234,0)">line 234</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fplot>@(f)singleFplot(cax,{f},limits,extraOpts,args)', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m', 193)" style="font-weight:bold">fplot>@(f)singleFplot(cax,{f},limits,extraOpts,args)</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m',193,0)">line 193</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fplot>vectorizeFplot', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m', 193)" style="font-weight:bold">fplot>vectorizeFplot</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m',193,0)">line 193</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fplot', 'C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m', 163)" style="font-weight:bold">fplot</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2018a\toolbox\matlab\specgraph\fplot.m',163,0)">line 163</a>)] 
