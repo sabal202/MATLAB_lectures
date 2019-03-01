@@ -1,0 +1,54 @@
+A = fix(rand(4)*100)
+
+A =
+
+    67     3     9    13
+    39    88    26    72
+    36    91    33    10
+    98    79    67    65
+
+B = fix(rand(4)*100)
+
+B =
+
+    49    89     3    90
+    77    33    74    60
+    71    69    50    61
+    90    19    47    85
+
+A < B
+
+ans =
+
+  44 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   0   1   0   1
+   1   0   1   0
+   1   0   1   1
+   0   0   0   1
+
+a = 1;
+b = 0;
+c = 2;
+d = and(a, b) + c
+
+d =
+
+     2
+
+e = a & b + c
+
+e =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+and(a, c)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+diary off

@@ -1,0 +1,105 @@
+x1 = -3; x2 = 0.5; x3 = 7.7;
+x = [x1 x2 x3]
+
+x =
+
+   -3.0000    0.5000    7.7000
+
+disp(x)
+   -3.0000    0.5000    7.7000
+
+disp(sprintf('X1 = %f X2 = %f', x1, x2))
+X1 = -3.000000 X2 = 0.500000
+fprintf(1, 'X1 = %f X2 = %f', x1, x2)
+X1 = -3.000000 X2 = 0.500000
+fprintf(1, 'X1 = %f X2 = %f\n', x1, x2)
+X1 = -3.000000 X2 = 0.500000
+fprintf('X1 = %f X2 = %f\n', x1, x2)
+X1 = -3.000000 X2 = 0.500000
+help sprintf
+ <strong>sprintf</strong> Write formatted data to string or character vector
+    STR = <strong>sprintf</strong>(FORMAT, A, ...) applies FORMAT to all elements of
+    array A and any additional array arguments in column order, and returns
+    the results as STR. FORMAT can be a character vector or a string
+    scalar. The data type of STR is the same as the data type of FORMAT.
+ 
+    [STR, ERRMSG] = <strong>sprintf</strong>(FORMAT, A, ...) returns an error message when
+    the operation is unsuccessful.  Otherwise, ERRMSG is empty.
+ 
+    <strong>sprintf</strong> is the same as FPRINTF except that it returns the data in a 
+    MATLAB variable rather than writing to a file.
+ 
+    FORMAT describes the format of the output fields, and can include 
+    combinations of the following:
+ 
+       * Conversion specifications, which include a % character, a
+         conversion character (such as d, i, o, u, x, f, e, g, c, or s),
+         and optional flags, width, and precision fields.  For more
+         details, type "doc sprintf" at the command prompt.
+ 
+       * Literal text to print.
+ 
+       * Escape characters, including:
+             \b     Backspace            ''   Single quotation mark
+             \f     Form feed            %%   Percent character
+             \n     New line             \\   Backslash
+             \r     Carriage return      \xN  Hexadecimal number N
+             \t     Horizontal tab       \N   Octal number N%
+         where \n is a line termination character on all platforms.
+ 
+    Notes:
+ 
+    If you apply an integer or text conversion to a numeric value that
+    contains a decimal, MATLAB overrides the specified conversion, and
+    uses %e to express the value in exponential notation.
+ 
+    Numeric conversions print only the real component of complex numbers.
+ 
+    Examples
+       sprintf('%0.5g',(1+sqrt(5))/2)       % 1.618
+       sprintf('%0.5g',1/eps)               % 4.5036e+15       
+       sprintf('%15.5f',1/eps)              % 4503599627370496.00000
+       sprintf('%d',round(pi))              % 3
+       sprintf('%s','hello')                % hello
+       sprintf('The array is %dx%d.',2,3)   % The array is 2x3.
+ 
+    See also <a href="matlab:help fprintf">fprintf</a>, <a href="matlab:help sscanf">sscanf</a>, <a href="matlab:help num2str">num2str</a>, <a href="matlab:help int2str">int2str</a>, <a href="matlab:help char">char</a>, <a href="matlab:help string">string</a>, <a href="matlab:help compose">compose</a>.
+
+    <a href="matlab:doc sprintf">Reference page for sprintf</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('sprintf')">Other functions named sprintf</a>
+
+doc sprintf
+x = input('Input x: ');
+Input x: 324
+str = input('In str: ', 's');
+In str: 23dfdfs
+x = 10; y = 20; z = x*y;
+keyboard
+x = 100
+
+x =
+
+   100
+
+dbcount
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('keyboard')" style="font-weight:bold">keyboard</a>
+Undefined function or variable 'dbcount'.
+} 
+dbcont
+z = x*y
+
+z =
+
+        2000
+
+disp('Подготовить сообщение про точки останова, функции отладки, и тд')
+Подготовить сообщение про точки останова, функции отладки, и тд
+pause()
+pause(2)
+menu('Choose:', 'case 1', 'case 2', 'case 3')
+
+ans =
+
+     1
+
+diary off
